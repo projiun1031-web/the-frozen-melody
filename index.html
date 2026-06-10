@@ -1,85 +1,237 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>解凍的旋律 | The Frozen Melody</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>解凍的旋律 The Frozen Melody</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#080808;color:#fff;line-height:1.6}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=80');background-size:cover;display:flex;align-items:center;padding:8%}
-h1{font-size:4rem;margin:0}
-.btn{display:inline-block;padding:14px 28px;background:#d4af37;color:#000;text-decoration:none;font-weight:bold;border-radius:6px}
-section{padding:70px 10%;border-bottom:1px solid #222}
-.card{background:#111;padding:20px;border-radius:10px;margin:10px 0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.flow div{padding:10px;margin:10px;background:#111;border-left:4px solid #d4af37}
-.progress{background:#222;height:28px;border-radius:20px;overflow:hidden}
-.bar{width:0%;height:100%;background:#d4af37}
-@media(max-width:768px){.grid{grid-template-columns:1fr}h1{font-size:2.5rem}}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,"Noto Sans TC",sans-serif;}
+body{background:#05070a;color:#fff;overflow-x:hidden;}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('poster.jpg') center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.2));
+}
+
+.hero-content{
+  position:relative;
+  text-align:center;
+  max-width:900px;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:64px;
+  letter-spacing:4px;
+}
+
+.hero h2{
+  font-size:20px;
+  opacity:.8;
+  margin-top:10px;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:16px;
+  opacity:.9;
+}
+
+.btn{
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 28px;
+  background:#d6b25e;
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+.btn:hover{transform:scale(1.05);}
+
+/* SECTIONS */
+section{
+  padding:80px 10%;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+/* FLOW */
+.flow{
+  display:grid;
+  gap:12px;
+}
+
+.flow div{
+  background:#111;
+  padding:14px;
+  border-left:3px solid #d6b25e;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.card{
+  background:#0e1117;
+  padding:20px;
+  border-radius:10px;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+.card h3{color:#d6b25e;margin-bottom:10px;}
+
+/* PROGRESS */
+.progress{
+  width:100%;
+  height:20px;
+  background:#222;
+  border-radius:20px;
+  overflow:hidden;
+  margin:20px 0;
+}
+
+.bar{
+  width:0%;
+  height:100%;
+  background:linear-gradient(90deg,#d6b25e,#ffdf8a);
+  animation:load 2.5s forwards;
+}
+
+@keyframes load{
+  to{width:35%;}
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1{font-size:38px;}
+  .grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
+
 <body>
+
+<!-- HERO -->
 <div class="hero">
-  <div class="overlay">
+  <div class="hero-content">
     <h1>解凍的旋律</h1>
+    <h2>The Frozen Melody</h2>
     <p>當加害者靠惡意賺取的百萬流量，一夕之間被法律強制用來治癒受害者。</p>
+    <a href="#fund" class="btn">支持募資計畫</a>
   </div>
 </div>
-<h1>解凍的旋律</h1>
-<h2>The Frozen Melody</h2>
-<p>當加害者靠惡意賺取的百萬流量，一夕之間被法律強制用來治癒受害者。</p>
-<a class="btn" href="#fund">支持募資</a>
-</div>
-</div>
 
+<!-- WORLD -->
 <section>
-<h2>如果霸凌也要付出代價？</h2>
-<p>一部探討網路霸凌、修復式正義與AI法治的高概念微電影。</p>
+  <h2>世界觀｜惡名得利轉移法</h2>
+  <p>當法律與 AI 結合，流量不再只是金錢，而是責任。</p>
+
+  <div class="flow">
+    <div>霸凌影片上傳社群</div>
+    <div>AI 偵測異常流量</div>
+    <div>法院認定為惡意收益</div>
+    <div>金流即時轉移</div>
+    <div>受害者專戶啟動</div>
+    <div>人生修復開始</div>
+  </div>
 </section>
 
+<!-- CHARACTERS -->
 <section>
-<h2>惡名利得轉移法</h2>
-<div class="flow">
-<div>霸凌影片上架</div>
-<div>流量爆發</div>
-<div>AI監測與法院認定</div>
-<div>收益強制攔截</div>
-<div>轉入受害者專戶</div>
-<div>人生重建</div>
-</div>
+  <h2>角色命運</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>賴小晴</h3>
+      <p>受害者 / PTSD / 失聲 / 斷網</p>
+      <p>→ 重生為舞台上的光</p>
+    </div>
+
+    <div class="card">
+      <h3>羅傅翔</h3>
+      <p>加害者 / 黑紅網紅 / 流量受益者</p>
+      <p>→ 成為護理助理學習同理心</p>
+    </div>
+  </div>
 </section>
 
+<!-- STORY -->
 <section>
-<h2>角色命運</h2>
-<div class="grid">
-<div class="card">
-<h3>賴小晴</h3>
-<p>PTSD、失聲、休學 → 重返舞台</p>
-</div>
-<div class="card">
-<h3>羅傅翔</h3>
-<p>黑紅網紅 → 護理助理 → 學習同理心</p>
-</div>
-</div>
+  <h2>核心劇情</h2>
+  <p>
+  在一個流量可以被法律重新分配的世界裡，
+  每一次點擊，都可能改變一個人的命運。
+  </p>
 </section>
 
-<section>
-<h2>斑馬線的救贖</h2>
-<p>黃昏細雨，兩人擦肩而過。一人走向舞台，一人走向救贖。</p>
+<!-- FUNDING -->
+<section id="fund" class="cta">
+  <h2>500萬募資計畫</h2>
+
+  <div class="progress">
+    <div class="bar"></div>
+  </div>
+
+  <p>目標：NT$ 5,000,000</p>
+
+  <div class="grid" style="margin-top:30px;">
+    <div class="card">
+      <h3>支持者 NT$500</h3>
+      <p>電子感謝卡</p>
+    </div>
+
+    <div class="card">
+      <h3>解凍夥伴 NT$1000</h3>
+      <p>幕後花絮 + 電子感謝卡</p>
+    </div>
+
+    <div class="card">
+      <h3>首映支持 NT$5000</h3>
+      <p>首映會 + 限量海報</p>
+    </div>
+
+    <div class="card">
+      <h3>製作人等級</h3>
+      <p>進入電影製作名單</p>
+    </div>
+  </div>
+
+  <a class="btn" style="margin-top:40px;">立即支持</a>
 </section>
 
-<section id="fund">
-<h2>500萬募資計畫</h2>
-<div class="progress"><div class="bar"></div></div>
-<p>目標：NT$5,000,000</p>
-<ul>
-<li>場景與美術 30%</li>
-<li>後期與特效 24%</li>
-<li>演員訓練 20%</li>
-<li>攝影器材 20%</li>
-<li>行政與行銷 6%</li>
-</ul>
-<a class="btn">我要支持</a>
+<!-- FOOTER -->
+<section>
+  <p style="text-align:center;opacity:.6;">
+    The Frozen Melody © 2026 — A Film About Law, AI & Humanity
+  </p>
 </section>
 
 </body>
